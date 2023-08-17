@@ -38,9 +38,7 @@ export function revokeTicket(visitor) {
  */
 export function ticketStatus(tickets, ticketId) {
   for(let ticketId in tickets){
-    if(tickets.ticketId === undefined || tickets.ticketId === null){
-      return "not sold";
-    }
+    ticketId ?? return "not sold"
   }
   return "unknown ticket id";
 }
